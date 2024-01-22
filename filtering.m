@@ -1,7 +1,6 @@
 function [] = filtering(DataSetName, classifier, number, iter, massage)
     addpath(genpath('./libsvm-3.24'));
     addpath(genpath('./common'));
-    addpath('./filtering');
 
     poolobj = gcp('nocreate');
     tic;
