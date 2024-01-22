@@ -1,4 +1,4 @@
-function [] = filtering(DataSetName, classifier, number, iter, massage)
+function [] = filtering(DataSetName, classifier, number)
     addpath(genpath('./libsvm-3.24'));
     addpath(genpath('./common'));
 
@@ -31,6 +31,7 @@ function [] = filtering(DataSetName, classifier, number, iter, massage)
                     radius = 3;
             end
             data = lgcatsw(img,radius,iter); 
+	    massage = 'raw';  
         otherwise
             error('Unknown classifier requested.');
     end
