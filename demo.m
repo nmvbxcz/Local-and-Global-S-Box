@@ -1,4 +1,4 @@
-function [] = filtering(DataSetName, classifier, number)
+function [] = demo(DataSetName, classifier, number)
     addpath(genpath('./libsvm-3.24'));
     addpath(genpath('./common'));
 
