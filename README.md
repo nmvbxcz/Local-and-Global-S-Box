@@ -10,6 +10,6 @@ The data sets and  number of training samples can be selected within the code.
 
 ## Usage:
 For example, when DataSet Indianpines takes 5-30 training sample points for each class, the method of calling lgs_box algorithm for 10 iterations is as follows:
-- filtering('Indianpines', 'lgs_box', [5,10,15,20,25,30]) 
+- demo('Indianpines', 'lgs_box', [5,10,15,20,25,30]) 
 
 Then the results are then automatically saved to file "all_result.txt".
