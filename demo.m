@@ -1,4 +1,4 @@
-function [] = demo(DataSetName, classifier, number, pc)
+function [] = demo(DataSetName, classifier, train_number, pc)
     addpath(genpath('./libsvm-3.24'));
     addpath(genpath('./common'));
     poolobj = gcp('nocreate');
@@ -38,10 +38,10 @@ function [] = demo(DataSetName, classifier, number, pc)
     ua = zeros(10,max(gt(:)));
     my_map = zeros(10,size(data,1),size(data,2));
     dex = [1,11,26,33,52,58,85,104,111,121];
-    for i = 1:size(number,2)
+    for i = 1:size(train_number,2)
 
         parfor index=1:10
-                [oa(index),aa(index),kappa(index),ua(index,:),my_map(index,:,:)] = hsi_classify(data,gt,number(i),dex(index));
+                [oa(index),aa(index),kappa(index),ua(index,:),my_map(index,:,:)] = hsi_classify(data,gt,train_number(i),dex(index));
         end
 	
         oa_mean = roundn(mean(oa),-4)
