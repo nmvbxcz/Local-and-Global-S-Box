@@ -7,6 +7,7 @@ The data sets and  number of training samples can be selected within the code.
 - DataSetName in {'Indianpines', 'PaviaU', 'XuZhou'}
 - classifier in {'raw', 'lgs_box'}
 - train_number indicates the number of training samples selected for each category.
+- PC indicates the dimension after PCA.
 
 ## Usage:
 For example, when DataSet Indianpines takes 5-30 training sample points for each class, the method of calling lgs_box algorithm for 10 iterations is as follows:
