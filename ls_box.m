@@ -1,4 +1,4 @@
-function [result]=sw_box_everytime_auto(im, radius)
+function [result]=ls_box(im, radius)
     
     r = radius; %the radius of the side window
     k = ones(2*r+1,1)/(2*r+1); %separable kernel 
